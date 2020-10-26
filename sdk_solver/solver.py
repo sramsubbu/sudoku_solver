@@ -13,9 +13,9 @@ class Solver:
         unsolved_capacity = 81 - puzzle
         solved_percent = (solved / unsolved_capacity ) * 100
         solved_percent = round(solved_percent, 3)
-        print('Solved: ', solved)
-        print('Solved percent: ', solved_percent)      
-
+        # print('Solved: ', solved)
+        # print('Solved percent: ', solved_percent)      
+]
     def solve(self, strategy='solve_single_probs'):
         singles = 81
         while singles > 0:
@@ -35,7 +35,6 @@ class Solver:
             v = value.copy()
             val = v.pop()
             self.grid[key] = val
-        print(singles)
         return len(singles)
 
     def _get_probs(self):
